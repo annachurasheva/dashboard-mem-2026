@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: install",
+      "type": "npm",
+      "script": "install",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "npm: dev",
+      "type": "npm",
+      "script": "dev",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "npm: build",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm: preview",
+      "type": "npm",
+      "script": "preview",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "git: status",
+      "type": "shell",
+      "command": "git status --short",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "check: no node_modules commit",
+      "type": "shell",
+      "command": "git ls-files --cached | findstr node_modules",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
